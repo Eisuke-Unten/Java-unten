@@ -188,7 +188,13 @@ public class Qes1_13 {
           System.out.println(result11);  // 48337.0128.4
           
          //問12   問11で変換した【年齢・身長】を整数型に変換して出力
+          
+          //Integer.parseInt() は、文字列（String型）を整数（int型）に変換するメソッド
           int intAge = Integer.parseInt(strAge);
+          
+          // Double.parseDouble = 文字列を double 型（小数）に変換するメソッド
+          // (int) = キャスト（型変換） を意味し、double → int に変換
+          //  つまり 小数点以下を切り捨てて整数に変換
           
           int intHeight = (int) Double.parseDouble(strHeight);
           System.out.println(intAge);     // 48
@@ -200,7 +206,6 @@ public class Qes1_13 {
           // 13: 年齢が25以上 または 身長が160以上 → trueを出力（if文なし）
           System.out.println(intAge >= 25 || intHeight >= 160);  // true
           
-
 	  }
 	}
 
