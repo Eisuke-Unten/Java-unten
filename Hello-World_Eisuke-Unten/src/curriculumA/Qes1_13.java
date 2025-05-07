@@ -4,32 +4,32 @@ public class Qes1_13 {
 
 	public static void main(String[] args) {
 		
-	//問1 宣言のみ
-//		byte byteVar;        //バイト型
-//		short shortVar;  	 //短整数型
-//		int intVar;  		 //整数型
-//		long longVar;		 //長整数型
-//		float floatVar;		 //単精度浮動少数点数型
-//		double doubleVar;	 //倍精度浮動少数点数型
-//		char charVar;		 //文字型
-//		String stringVar;	 //文字列型
-//		boolean booleanVar;  //ブーリアン型
+//	問1 宣言のみ
+		byte byteVar;        //バイト型
+		short shortVar;  	 //短整数型
+		int intVar;  		 //整数型
+		long longVar;		 //長整数型
+		float floatVar;		 //単精度浮動少数点数型
+		double doubleVar;	 //倍精度浮動少数点数型
+		char charVar;		 //文字型
+		String stringVar;	 //文字列型
+		boolean booleanVar;  //ブーリアン型
 		
 	
 	
 	//問2　初期化
-		byte byteVar = 10;        //バイト型
-		short shortVar = 100;  	 //短整数型
-		int intVar = 1000;  		 //整数型
-		long longVar = 10000L;		 //長整数型　　　　　　　　long型は'L'が必要
+		 byteVar = 10;           //バイト型
+		 shortVar = 100;  	     //短整数型
+		 intVar = 1000;  		 //整数型
+		 longVar = 10000L;		 //長整数型　　　　　　　　long型は'L'が必要
 		
-		float floatVar = 9.5f;		 //単精度浮動少数点数型　　float型は’f’が必要
-		double doubleVar = 10.5;	 //倍精度浮動少数点数型
+		 floatVar = 9.5f;		 //単精度浮動少数点数型　　float型は’f’が必要
+		 doubleVar = 10.5;	 //倍精度浮動少数点数型
 		
-		char charVar = 'a';		 //文字型
-		String stringVar = "ハロー";	 //文字列型
+		 charVar = 'a';		     //文字型
+		 stringVar = "ハロー";	 //文字列型
 		
-		boolean booleanVar = true;  //ブーリアン型
+		 booleanVar = true;   //ブーリアン型
 		
 	//問3　変数に代入
 		
@@ -45,10 +45,10 @@ public class Qes1_13 {
 		
           
 	//問4　コンソール出力
-          System.out.println(byteVar + shortVar + intVar + longVar);            // 11110（10 + 100 + 1000 + 10000）
-          System.out.println(byteVar + shortVar + intVar + longVar);            // 11110（同じ）
-          System.out.println(byteVar + byteVar);            // 20（10 + 10） 
-          System.out.println(byteVar + byteVar);            // 20（同じ）
+          System.out.println(byteVar + shortVar + intVar + longVar);    // 11110（10 + 100 + 1000 + 10000）
+          System.out.println(byteVar + shortVar + intVar + longVar);    // 11110（同じ）
+          System.out.println(byteVar + byteVar);                        // 20（10 + 10） 
+          System.out.println(byteVar + byteVar);                        // 20（同じ）
 
           // 文字・文字列・真偽値の出力
           System.out.println(charVar + " " + stringVar + " " + booleanVar);
