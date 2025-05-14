@@ -1,5 +1,6 @@
 package curriculum_B;
 
+import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,34 +8,44 @@ public class Qes1_3 {
 
 	public static void main(String[] args) {
 		//問1
+		
 
 		// Scannerを使ってユーザーからの入力を受け取る
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("ユーザー名を入力してください:");
+		boolean nameFlag = true; 
+		
+		String username = "";
+		while(nameFlag) {
+			System.out.println("ユーザー名を入力してください:");
 
-		// コンソールにユーザー名を入力
-		String username = scanner.nextLine();
+			// コンソールにユーザー名を入力
+			username = scanner.nextLine();
 
-		// 入力がnullまたは空の場合のチェック
-		if (username == null || username.trim().isEmpty()) {
+			// 入力がnullまたは空の場合のチェック
+			if (Objects.isNull(username) || username.isEmpty()) {
+//				if (username == null || username.isEmpty()) {
+				
+				System.out.println("名前を入力してください");
+			} // 入力されたユーザー名が10文字以上の場合のチェック
+			else if (username.length() > 10) {
+				System.out.println("名前を10文字以内にしてください");
+				
 
-			System.out.println("名前を入力してください");
-		} // 入力されたユーザー名が10文字以上の場合のチェック
-		else if (username.length() > 10) {
-			System.out.println("名前を10文字以内にしてください");
-			
+				//問2	
 
-			//問2	
+				// 半角英数字以外が含まれている場合のチェック
+			} else if (!username.matches("[a-zA-Z0-9]+")) {
+				System.out.println("半角英数字のみで名前を入力してください");
 
-			// 半角英数字以外が含まれている場合のチェック
-		} else if (!username.matches("[a-zA-Z0-9]+")) {
-			System.out.println("半角英数字のみで名前を入力してください");
-
-		} // 正常な場合の処理
-		else {
-			System.out.println("ユーザー名「" + username + "」を登録しました");
+			} // 正常な場合の処理
+			else {
+				System.out.println("ユーザー名「" + username + "」を登録しました");
+//				nameFlag = false;
+				break;  //while文を抜けるのに必要
+			}
 		}
+		
 		
 		//問3
 
@@ -100,3 +111,7 @@ public class Qes1_3 {
 	}
 
 }
+
+
+
+
