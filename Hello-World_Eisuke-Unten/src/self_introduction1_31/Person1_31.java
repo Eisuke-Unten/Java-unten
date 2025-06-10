@@ -2,22 +2,35 @@ package self_introduction1_31;
 
 public class Person1_31 {
 
-	public String name;
+	public String firstName;
+	// Java1_32 問題1
+	public String lastName;
 	public int age;
 	public double height;
 	public double weight;
-	 // Java1_31 問題1
+	// Java1_31 問題1
 	public static int count = 0;
 
 	// コンストラクタ（引数付き）
-	Person1_31(String name, int age, double height, double weight) {
+	// Java1_32 問題2 lastNameの値を引数で受け取るコンストラクタを追加で定義
+	Person1_31(String firstName, String lastName, int age, double height, double weight) {
 
-		this.name = name;
+		this.firstName = firstName;
+		// Java1_32 問題3
+		this.lastName = lastName;
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
-	// Java1_31 問題2	
+		// Java1_31 問題2	
 		Person1_31.count++;
+	}
+
+	/*
+	 * フルネームを返すメソッド
+	 * @return 苗字　名前
+	 */
+	public String fullName() {
+		return this.firstName + this.lastName;
 	}
 
 	// bmi を計算して返すメソッド
@@ -26,10 +39,10 @@ public class Person1_31 {
 	}
 
 	public void print() {
-		System.out.println("名前は" + this.name + "です");
+		System.out.println("名前は" + this.fullName() + "です");
 		System.out.println("年は" + this.age + "才です");
 		System.out.println("BMIは" + Math.floor(this.bmi()) + "です");
-	// Java1_30 問題10
+		// Java1_30 問題10
 		System.out.println("合計" + count + "人です");
 	}
 
